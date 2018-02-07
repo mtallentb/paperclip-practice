@@ -3,3 +3,13 @@
         <div class="bg-primary text-white col-12 col-md-8">.bg-primary</div>
     </div>
 </div>
+
+<div class="p-2">
+    <button class="btn btn-lg btn-outline-primary"><%= link_to 'View', post, class: 'text-primary view-hover' %></button>
+</div>
+<div class="p-2">
+    <button class="btn btn-lg btn-outline-info"><%= link_to 'Edit', edit_post_path(post), class: 'text-info view-hover' %></button>
+</div>
+<div class="p-2">
+    <button class="btn btn-lg btn-outline-danger"><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'text-danger view-hover' %></button>
+</div>
