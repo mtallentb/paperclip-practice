@@ -9,6 +9,19 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'shared/navbar.html.erb' %>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-10">
+          <div class="main-content">
+            <%= yield %>
+          </div>
+        </div>
+        <div class="col-md-1">
+        </div>
+      </div>
+    </div>
   </body>
 </html>

@@ -1,0 +1,16 @@
+/* Custom bootstrap variables must be set or imported *before* bootstrap. */
+@import "bootstrap";
+
+body {
+   background-image: image-url('clean_textile.png');
+   background-repeat: repeat;
+//    background-color: #cccccc;
+}
+
+// .main-content {
+//     margin-top: 70px;
+// }
+
+a.view-hover:hover {
+    color: white !important;
+}
