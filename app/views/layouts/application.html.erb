@@ -14,8 +14,15 @@
     <div class="container-fluid">
       <div class="row d-flex justify-content-center">
           <div class="col-12 col-lg-8 p-0">
-            <p class="notice"><%= notice %></p>
-            <p class="alert"><%= alert %></p>
+            <br />
+            <% if notice%>
+              <p class="alert alert-success"><%= notice %></p>
+            <% else %>
+            <% end %>
+            <% if alert %>
+              <p class="alert alert-danger"><%= alert %></p>
+            <% else %>
+            <% end %>
             <%= yield %>
           </div>
       </div>
