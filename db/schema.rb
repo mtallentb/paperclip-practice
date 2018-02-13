@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20180212202741) do
   enable_extension "plpgsql"
 
   create_table "posts", force: :cascade do |t|
+    t.bigint "user_id"
     t.string "name"
     t.string "title"
     t.text "content"
@@ -25,6 +26,7 @@ ActiveRecord::Schema.define(version: 20180212202741) do
     t.string "image_content_type"
     t.integer "image_file_size"
     t.datetime "image_updated_at"
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

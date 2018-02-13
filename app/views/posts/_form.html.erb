@@ -16,10 +16,10 @@
     <%= form.file_field :image %>
   </div>
 
-  <div class='field form-group'>
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :post_name, class: 'form-control' %>
-  </div>
+  <%= form.hidden_field :user_id, :value => current_user.id %>
+  
+  <% @full_name = current_user.first_name + " " + current_user.last_name %>
+  <%= form.hidden_field :name, :value => @full_name %>
 
   <div class='field form-group'>
     <%= form.label :title %>
