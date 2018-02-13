@@ -20,6 +20,7 @@
       </form>
       <% if current_user %>
         <%= link_to 'Log Out', destroy_user_session_path, method: :delete, class: 'btn btn-large btn-danger add-margin', role: 'button' %>
+        <a class="text-light nav-link">Hello, <%= current_user.first_name %></a>
       <% else %>
         <%= link_to 'Login', user_session_path, class: 'btn btn-large btn-success add-margin', role: 'button' %>
         <%= link_to 'Register', new_user_registration_path, class: 'btn btn-large btn-primary add-margin', role: 'button' %>
