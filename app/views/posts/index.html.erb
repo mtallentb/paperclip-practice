@@ -5,8 +5,7 @@
       <%= image_tag post.image.url(:large), class: 'card-img-top' %>
       <div class="card-body">
         <h5 class="card-title"><%= post.title %></h5>
-        <% @user = User.where(id: post.user_id) %>
-        <p><strong>Vendor:</strong> <%= @user[0].first_name %> <%= @user[0].last_name %></p>
+        <p><strong>Vendor:</strong> <%= post.get_user_full_name(post.user_id) %></p>
         <p class="card-text"><%= post.content %></p>
       </div>
       <div class="card-body">
