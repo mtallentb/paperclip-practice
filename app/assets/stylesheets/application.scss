@@ -15,6 +15,11 @@ body {
     margin-left: 10px;
 }
 
+.feed { 
+    display: flex;
+    justify-content: center;
+}
+
 a.view-hover:hover {
     color: white !important;
 }
